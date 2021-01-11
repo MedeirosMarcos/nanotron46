@@ -1,8 +1,16 @@
 import discord
 import discord.utils
 import random
+import json
 
 client = discord.Client()
+
+# carrega os parametros de configuracao do arquivo config.json para a variavel data
+with open("config.json", "r") as file:
+    data = json.load(file)
+
+# obtem o token a partir da variavel data
+token = data['token']
 
 @client.event
 async def on_ready():
@@ -66,6 +74,4 @@ async def on_message(message):
             banido = discord.utils.get(user.guild.roles, name="banido")
             await user.add_roles(banido)
 
-        
-client.run('token')
-
+client.run(token)
