@@ -67,6 +67,5 @@ async def on_message(message):
             await user.add_roles(banido)
 
         
-client.run('NzQ4MzQ1NTcxODE0ODAxNDU4.X0cFHw.0EEt4gc9iK5LD6LMlTx369wDeEY')
+client.run('token')
 
-#somos todos faria!!!
